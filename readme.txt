@@ -19,13 +19,15 @@ Elevator @ Floor 0 - (0,1),(0,3),(0,4),(0,3),(0,4) are loaded on the elevator fr
 Elevator @ Floor 1 - (0,1) gets off, (1,4) enters. Elevator is at capacity.
 Elevator @ Floor 2 - No one gets off, (2,0) cannot enter. Elevator is at capacity.
 Elevator @ Floor 3 - (0,3),(0,3) get off, (3,1) enters.
-Elevator @ Floor 4 - (0,4),(1,4) get off, (4,2) enters. - Bug here 3 people should get off there is another (0,4) that decided to stay on the elevator (wtf - just found this)
+Elevator @ Floor 4 - (0,4),(1,4) get off, (4,2) enters. - Bug here 3 people should get off there is another (0,4) that decided to stay on the elevator  - Update 5/6 - after fixing the elevator being stuck between floors 0 & 1, the 2nd (0,4) gets off the elevator the second time hitting floor 4. Still not at root cause on this one.
 Elevator @ Floor 3 - No Activity
 Elevator @ Floor 2 - (4,2) gets off, (2,0) enters.
 Elevator @ Floor 1 - (3,1) gets off, 
 Elevator @ Floor 0 - (2,0) gets off
 
 After this point there is a logic error, elevator cycles between Floors 1 and 0 in a loop.
+Update 5/6: this is now fixed. found my typo. elevator @going_up was never returning to true.
+
 
 
 Overall, I wish I was in better shape. Please be gentle. I will continue to work on this just for the satisfaction of beating elevators.

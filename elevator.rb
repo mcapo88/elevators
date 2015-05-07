@@ -36,7 +36,7 @@ class Elevator
     if(@current_floor > 0)
       @current_floor -= 1
     else
-      going_up = true
+      @going_up = true
       @current_floor += 1
     end
   end
@@ -57,7 +57,7 @@ class Elevator
     end
 
     # get in
-    while(floor.is_empty? && has_room?) #problem: nils are entering the elevator. !has_room prevents nils and Person objects from entering. bad
+    while(floor.is_empty? && has_room?) 
       enter(floor.dequeue)
     end
   end

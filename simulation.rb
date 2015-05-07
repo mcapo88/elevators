@@ -41,8 +41,6 @@ class Simulation
     @floors[2].enqueue(Person.new(2,0,self))
     @floors[1].enqueue(Person.new(1,4,self))
 
-
-
   end
 
   # if elevator is not at capacity and the ground floor has people waiting, get on the elevator
